@@ -1,0 +1,35 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/99fb5ee6-b508-484d-a684-190f70a0d9f7/attendees
+Content-Type: application/json
+
+{
+    "name": "Eliel Souza",
+    "email": "elielnnsouza5@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/99fb5ee6-b508-484d-a684-190f70a0d9f7
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+###
+
+GET http://localhost:3333/attendees/2/check-in
+
+
+###
+
+GET http://localhost:3333/events/99fb5ee6-b508-484d-a684-190f70a0d9f7/attendees?query=eliel
